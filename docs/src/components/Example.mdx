@@ -1,0 +1,28 @@
+import { Code } from '@astrojs/starlight/components';
+
+
+export const exampleCode = (`
+...
+// ><> WATCH constraint: docs/getting-started
+await fetch(\`http://localhost:3010/todos/$\{todo.id\}\`, {
+    method: \`PUT\`,
+    headers: {
+    "Content-Type": \`application/json\`,
+    },
+    body: JSON.stringify({
+    completed: !todo.completed,
+    }),
+})
+...
+`);
+
+
+export const highlights = [];
+
+<div>
+
+
+<Code code={exampleCode} lang="js" 
+
+  />
+  </div>

@@ -1,0 +1,144 @@
+---
+import Example from "../components/Example.mdx"
+import { Code } from '@astrojs/starlight/components';
+
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lo.fish: the meta-programming language for ArchGPT</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+    <style>
+        code {
+            padding: .2em .4em;
+            margin: 0;
+            font-size: 110%;
+            white-space: break-spaces;
+            background-color: rgba(175, 184, 193, 0.2);
+            border-radius: 6px;
+        }
+
+        blockquote {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-left: 5px solid #ccc;
+        }
+
+
+
+        a {
+            color: #0070f3;
+        }
+    </style>
+
+</head>
+
+<body class="home-page" style="font-family: 'Lato';">
+    <div class=" superContainer">
+
+
+
+        <div class="mainContainer" style="margin-top:22px">
+
+
+            <div style="padding:0 30px;text-align:left;  margin:0 auto; max-width:620px;">
+
+                <div style="font-family: 'Courier New', Courier, monospace; text-align: left; margin-right:20px;">
+
+                    lo.fish
+                    <div
+                        style="margin-top:10px;font-family: 'Courier New', Courier, monospace;   font-size: 0.9em; margin-bottom: 20px;">
+
+
+                    </div>
+                    <div
+                        style="margin-top:10px;font-family: 'Courier New', Courier, monospace;   font-size: 0.9em; margin-bottom: 20px;">
+
+                    </div>
+                </div>
+                <div>
+                    lo.fish is a meta-programming language to create LLM-driven automated software development pipelines
+                    with
+                    ArchGPT.
+
+                    <br /> <br />
+                    You can use lo.fish to segment your code, and define constraints and rules for code generation to
+                    automatically take place
+                    within your codebase.
+                    <br /><br />
+
+                    <Example />
+                    <br />
+                    In the example above, everytime there is a change in <code>"docs/getting-started.md"</code>, the
+                    codeblock below <code>{'><>'}</code>will be
+                    re-generated.
+
+                    <blockquote style="font-size: 0.9em;">
+                        You can also add a
+                        <code>{'><> WATCH'}</code> block in the documentation in
+                        <code>"docs/getting-started.md"</code> to trigger a rewriting when the code in your server is
+                        changed, thus
+                        creating a simple chain of code-automation. <br /><br /><a>Try out a full demo
+                            with
+                            a simple
+                            ElectricSQL app here.</a>
+                    </blockquote>
+
+                    <br />
+
+                    Basically, lo.fish is constraint-based annotation language to create a LLM-driven code-generation
+                    layer on
+                    top of your codebase. <br /><br />
+
+                    <a>Read more about its syntax and runtime here.</a>
+
+                    <br /><br />
+                    The lo.fish interpreter is super lightweight (3kb). It does not contain any LLM-layer by itself and
+                    is
+                    written
+                    in
+                    Rust using Gluon and
+                    Tree-sitter. It is designed to work seamlessly with ArchGPT (while you are also free to
+                    <a>create your own lo.fish adaptor</a>).
+                    <br /><br />
+                    lo.fish comes with out-of-the-box supports for source code in Rust,
+                    JavaScript, Python,
+                    Java, Kotlin,
+                    C#
+                    and SQL.
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <br /><br />
+
+
+
+    <br><br>
+
+
+
+
+    </div>
+
+    </div>
+
+
+
+
+
+    <div class="footer-desu">
+
+        <!-- © 2018-2020 Castella Pte. Ltd. Kovan Rd, Singapore.</div> -->
+</body>
+
+</html>
