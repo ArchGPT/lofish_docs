@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
+import starlightThemeRapide from 'starlight-theme-rapide'
+
 
 
 // https://astro.build/config
@@ -10,6 +11,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'My Docs',
+			plugins: [starlightThemeRapide()],
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},

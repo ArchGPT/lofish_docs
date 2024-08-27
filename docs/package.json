@@ -15,6 +15,7 @@
     "@expressive-code/plugin-line-numbers": "^0.35.6",
     "astro": "^4.10.2",
     "sharp": "^0.32.5",
+    "starlight-theme-rapide": "^0.1.1",
     "typescript": "^5.5.4"
   }
 }

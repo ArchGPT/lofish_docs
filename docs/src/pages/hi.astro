@@ -1,15 +1,18 @@
 ---
 import Example from "../components/Example.mdx"
 import { Code } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
 ---
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lo.fish: the meta-programming language for ArchGPT</title>
+    <title>lo.fish ><>: the meta-programming language for ArchGPT</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
     <style>
         code {
@@ -37,6 +40,7 @@ import { Code } from '@astrojs/starlight/components';
 </head>
 
 <body class="home-page" style="font-family: 'Lato';">
+
     <div class=" superContainer">
 
 
@@ -48,38 +52,41 @@ import { Code } from '@astrojs/starlight/components';
 
                 <div style="font-family: 'Courier New', Courier, monospace; text-align: left; margin-right:20px;">
 
-                    lo.fish
-                    <div
-                        style="margin-top:10px;font-family: 'Courier New', Courier, monospace;   font-size: 0.9em; margin-bottom: 20px;">
+                    lo.fish {'><>'}
+                        <div
+                            style="margin-top:10px;font-family: 'Courier New', Courier, monospace;   font-size: 0.9em; margin-bottom: 20px;">
 
 
-                    </div>
-                    <div
-                        style="margin-top:10px;font-family: 'Courier New', Courier, monospace;   font-size: 0.9em; margin-bottom: 20px;">
+                        </div>
+                        <div
+                            style="margin-top:10px;font-family: 'Courier New', Courier, monospace;   font-size: 0.9em; margin-bottom: 20px;">
 
-                    </div>
+                        </div>
                 </div>
                 <div>
-                    lo.fish is a meta-programming language to create LLM-driven automated software development pipelines
+                    lo.fish is a meta-programming language to create LLM-driven software development pipelines
                     with
                     ArchGPT.
 
                     <br /> <br />
-                    You can use lo.fish to segment your code, and define constraints and rules for code generation to
+                    You can use lo.fish to segment your code, and define constraints and rules for code generation
+                    to
                     automatically take place
                     within your codebase.
                     <br /><br />
-
+                    lo.fish comes with out-of-the-box supports for source code in Rust, JavaScript, Python, Java,
+                    Kotlin, C#, SQL, JSX, HTML, and Markdown.
+                    <br /><br />
                     <Example />
                     <br />
-                    In the example above, everytime there is a change in <code>"docs/getting-started.md"</code>, the
+                    In the example above, everytime there is a change in <code>docs/getting-started.md</code>, the
                     codeblock below <code>{'><>'}</code>will be
-                    re-generated.
+                    re-generated. If you edit the second constraints "use fetch API" to "use axios", the code will be re-generated and axios will be imported.
 
                     <blockquote style="font-size: 0.9em;">
                         You can also add a
                         <code>{'><> WATCH'}</code> block in the documentation in
-                        <code>"docs/getting-started.md"</code> to trigger a rewriting when the code in your server is
+                        <code>docs/getting-started.md</code> to trigger a rewriting when the code in your server is
                         changed, thus
                         creating a simple chain of code-automation. <br /><br /><a>Try out a full demo
                             with
@@ -89,29 +96,30 @@ import { Code } from '@astrojs/starlight/components';
 
                     <br />
 
-                    Basically, lo.fish is constraint-based annotation language to create a LLM-driven code-generation
+                    Basically, lo.fish is a constraint-based annotation language to create a LLM-driven
+                    code-generation
                     layer on
                     top of your codebase. <br /><br />
 
                     <a>Read more about its syntax and runtime here.</a>
 
                     <br /><br />
-                    The lo.fish interpreter is super lightweight (3kb). It does not contain any LLM-layer by itself and
+                    The lo.fish interpreter is super lightweight (3kb) and does not contain any LLM-layer by itself.
+                    It
                     is
                     written
                     in
                     Rust using Gluon and
-                    Tree-sitter. It is designed to work seamlessly with ArchGPT (while you are also free to
+                    Tree-sitter, and is designed to work seamlessly with ArchGPT (while you are also free to
                     <a>create your own lo.fish adaptor</a>).
-                    <br /><br />
-                    lo.fish comes with out-of-the-box supports for source code in Rust,
-                    JavaScript, Python,
-                    Java, Kotlin,
-                    C#
-                    and SQL.
 
 
                 </div>
+                <br /><br />
+                <CardGrid>
+                    <LinkCard title="Authoring Markdown" href="/guides/authoring-content/" />
+                    <LinkCard title="Components" href="/guides/components/" />
+                </CardGrid>
             </div>
         </div>
     </div>
@@ -136,9 +144,10 @@ import { Code } from '@astrojs/starlight/components';
 
 
 
-    <div class="footer-desu">
 
-        <!-- © 2018-2020 Castella Pte. Ltd. Kovan Rd, Singapore.</div> -->
+    <!-- © 2018-2020 Castella Pte. Ltd. Kovan Rd, Singapore.</div> -->
+
+
 </body>
 
 </html>
