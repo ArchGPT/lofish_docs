@@ -20,8 +20,11 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
             margin: 0;
             font-size: 110%;
             white-space: break-spaces;
-            background-color: rgba(175, 184, 193, 0.2);
+            background-color: rgba(129, 135, 141, 0.2) !important;
             border-radius: 6px;
+        }
+        pre code{
+            background-color: rgba(129, 135, 141, 0.2)
         }
 
         blockquote {
@@ -116,10 +119,10 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
                 </div>
                 <br /><br />
-                <CardGrid>
+                <!-- <CardGrid>
                     <LinkCard title="Authoring Markdown" href="/guides/authoring-content/" />
                     <LinkCard title="Components" href="/guides/components/" />
-                </CardGrid>
+                </CardGrid> -->
             </div>
         </div>
     </div>

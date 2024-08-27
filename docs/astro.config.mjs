@@ -12,9 +12,9 @@ export default defineConfig({
 		starlight({
 			title: 'My Docs',
 			plugins: [starlightThemeRapide()],
-			social: {
-				github: 'https://github.com/withastro/starlight',
-			},
+			// social: {
+			// 	github: 'https://github.com/withastro/starlight',
+			// },
 			expressiveCode: {
 				// plugins: [pluginLineNumbers()],
 				themes: ['dracula', 'solarized-light'],
@@ -26,7 +26,7 @@ export default defineConfig({
 					// },
 					codeFontSize: '0.76rem',
 				},
-			  },
+			},
 			sidebar: [
 				{
 					label: 'Guides',
