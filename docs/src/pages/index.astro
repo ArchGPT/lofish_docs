@@ -3,11 +3,14 @@ import Example from "../components/Example.mdx"
 import { Code } from '@astrojs/starlight/components';
 import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import StarlightHead from '@astrojs/starlight/components/Head.astro';
 
 ---
 
 <!DOCTYPE html>
 <html>
+
+
 
 <head>
     <meta charset="utf-8">
@@ -43,7 +46,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 </head>
 
 <body class="home-page" style="font-family: 'Lato';">
-
+<!-- <StarlightPage  frontmatter={{ title: 'My custom page' }}> -->
     <div class=" superContainer">
 
 
@@ -151,6 +154,8 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     <!-- © 2018-2020 Castella Pte. Ltd. Kovan Rd, Singapore.</div> -->
 
 
+
+<!-- </StarlightPage>  -->
 </body>
 
 </html>

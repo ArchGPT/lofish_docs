@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import starlightThemeRapide from 'starlight-theme-rapide'
+// import starlightThemeRapide from 'starlight-theme-rapide'
 
 
 
@@ -11,13 +11,15 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'My Docs',
-			plugins: [starlightThemeRapide()],
+
+			// plugins: [starlightThemeRapide()],
 			// social: {
 			// 	github: 'https://github.com/withastro/starlight',
 			// },
+			customCss: ["./src/style.css"],
 			expressiveCode: {
 				// plugins: [pluginLineNumbers()],
-				themes: ['dracula', 'solarized-light'],
+				themes: ['dracula'],
 				styleOverrides: {
 					// You can also override styles
 					borderRadius: '0.5rem',
